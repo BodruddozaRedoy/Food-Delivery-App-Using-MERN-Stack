@@ -4,6 +4,12 @@ import { assets } from '../../assets/assets'
 const Add = () => {
 
     const [image, setImage] = useState(false)
+    const [data, setData] = useState({
+        name: "",
+        description:"",
+        price:"",
+        category:"Salad"
+    })
 
   return (
     
@@ -18,16 +24,16 @@ const Add = () => {
             </div>
             <div className="add-product-name flex flex-col w-[100%]">
                 <p>Product Name</p>
-                <input className='border p-5' type="text" name="name" id="" placeholder='Type here' />
+                <input onChange={(e)=>set} className='border p-5' type="text" name="name" id="" placeholder='Type here' />
             </div>
             <div className="add-product-description flex flex-col w-[100%] ">
                 <p>Product Description</p>
                 <textarea className='border p-5' name="description" id="" cols="30" rows="10" placeholder='Write Content Here'></textarea>
             </div>
-            <div className="add-category-price flex flex-col">
+            <div className="add-category-price flex gap-5">
                 <div className="add-category">
                     <p>Product category</p>
-                    <select className='border' name="category" id="">
+                    <select className='border p-5' name="category" id="">
                         <option value="Salad">Salad</option>
                         <option value="Rolls">Rolls</option>
                         <option value="Deserts">Deserts</option>
