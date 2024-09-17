@@ -6,7 +6,7 @@
   "scripts": {
     "server": "nodemon server.js"
   },
-  "author": "",
+  "author": "redoy",
   "license": "ISC",
   "description": "",
   "dependencies": {
